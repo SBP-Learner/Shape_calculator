@@ -1,22 +1,22 @@
 import math
 
-## Explaination of this block is similar to all other defination and main block of code
+## Explaination of this block is similar to all other defination or main block of code
 
 def square () : # creates a function 
    while True : # runs a loop until the user select a option where it breakes this loop 
     print("\nWhat do you want to calculate\n1. Perimeter of square\n2. Area of square\n3. Go back")
     choose = input("Choose the following : ") # accepts all input 
-    if  choose == '1' : # filters and only see if 1 as a input has been given or not
+    if  choose == '1' : # filters or only see if 1 as a input has been given or not
      try: # it will not let the whole programm crash due to non float input by user.
         side = float(input("Enter the side of the square (in cm): ")) # accepts only float
-        if side <= 0: # sides cannot be 0 and negetive for shapes
+        if side <= 0: # sides cannot be 0 or negetive for shapes
          print("Side length must be a positive number.")
          continue # it skips this part which is not valid length
-     except ValueError: # will show the below massage and skip the invalid part.
+     except ValueError: # will show the below massage or skip the invalid part.
          print("Invalid input! Please enter a number.")
          continue
      perimeter = 4*side # calculates the perimeter 
-     print(f"Perimeter of the square is {perimeter}") 
+     print(f"Perimeter of the square is {perimeter}cm") 
     elif choose == '2' : # checks if 2 is given as input
      try:
        side = float(input("Enter the side of the square (in cm): "))
@@ -30,7 +30,7 @@ def square () : # creates a function
      print(f"Area of square is {area}sq.cm")
     elif choose == '3' :
        print("Exiting the current page....")
-       break # breakes the current loop and takes back to previous loop
+       break # breakes the current loop or takes back to previous loop
     else : # if no input matches it will run this block of code.
        print("Invalid choice\nTry again...\n") 
     
@@ -42,20 +42,20 @@ def rectangle () :
      try:  
         length = float(input("Enter the length of the rectangle (in cm) : ")) 
         width = float(input("Enter the width of the rectangle (in cm) : "))
-        if length <= 0 and width <= 0: 
-         print("length and width must be a positive number.")
+        if length <= 0 or width <= 0: 
+         print("length or width must be a positive number.")
          continue 
      except ValueError: 
          print("Invalid input! Please enter a number.")
          continue
      perimeter = 2*(length+width)  
-     print(f"Perimeter of the rectangle is {perimeter}sq.cm") 
+     print(f"Perimeter of the rectangle is {perimeter}cm") 
     elif choose == '2' :
      try:
       length = float(input("Enter the length of the rectangle (in cm) : ")) 
       width = float(input("Enter the width of the rectangle (in cm) : "))
-      if length <= 0 and width <= 0: 
-         print("length and width must be a positive number.")
+      if length <= 0 or width <= 0: 
+         print("length or width must be a positive number.")
          continue
      except ValueError :
        print("Please enter a number.")
@@ -77,11 +77,11 @@ def triangle () :
        side1 = float(input("Enter the first side of the triangle (in cm) : "))
        side2 = float(input("Enter the second of the triangle (in cm) : "))
        side3 = float(input("Enter the third of the triangle (in cm) : "))
-       if side1 <= 0 and side2 <= 0 and side3 <= 0 :
+       if side1 <= 0 or side2 <= 0 or side3 <= 0 :
           print("Number should be positive.")
           continue
        perimeter = side1+side2+side3
-       print(f"Perimeter of triangle is {perimeter}sq.cm")
+       print(f"Perimeter of triangle is {perimeter}cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -89,7 +89,7 @@ def triangle () :
       try :
        base = float(input("Enter the base of the triangle (in cm) : "))
        height = float(input("Enter the height of the triangle (in cm) : "))
-       if base <= 0 and height <= 0 :
+       if base <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -111,11 +111,11 @@ def right_triangle () :
       try :
        base = float(input("Enter the base of the triangle (in cm) : "))
        height = float(input("Enter the height of the triangle (in cm) : "))
-       if base <= 0 and height <= 0 :
+       if base <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
        perimeter = base + height + math.sqrt(base**2+height**2) 
-       print(f"Perimeter of triangle is {perimeter}sq.cm")
+       print(f"Perimeter of triangle is {perimeter}cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -123,7 +123,7 @@ def right_triangle () :
       try :
        base = float(input("Enter the base of the triangle (in cm) : "))
        height = float(input("Enter the height of the triangle (in cm) : "))
-       if base <= 0 and height <= 0 :
+       if base <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -136,7 +136,7 @@ def right_triangle () :
       try :
        base = float(input("Enter the base of the triangle (in cm) : "))
        height = float(input("Enter the height of the triangle (in cm) : "))
-       if base <= 0 and height <= 0 :
+       if base <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -162,7 +162,7 @@ def equilateral_triangle () :
           print("Number should be positive.")
           continue
         eqperimeter = side*3 
-        print(f"Perimeter of equilateral triangle is {eqperimeter}sq.cm")
+        print(f"Perimeter of equilateral triangle is {eqperimeter}cm")
        except ValueError :
          print("Please enter a number.")
          continue
@@ -194,7 +194,7 @@ def circle () :
           print("Number should be positive.")
           continue
         circumference = 2*math.pi*radius
-        print(f"Circumference of circle is {circumference}sq.cm")
+        print(f"Circumference of circle is {circumference}cm")
        except ValueError :
          print("Please enter a number.")
          continue
@@ -224,11 +224,11 @@ def parallelogram () :
       try :
        side1 = float(input("Enter the first side of the parallelogram : "))
        side2 = float(input("Enter the second of the parallelogram : "))
-       if side1 <= 0 and side2 <= 0 :
+       if side1 <= 0 or side2 <= 0 :
           print("Number should be positive.")
           continue
        perimeter = 2*(side1+side2)
-       print(f"Perimeter of parallelogram is {perimeter}sq.cm")
+       print(f"Perimeter of parallelogram is {perimeter}cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -236,7 +236,7 @@ def parallelogram () :
       try :
        base = float(input("Enter the base of the parallelogram : "))
        height = float(input("Enter the height of the parallelogram : "))
-       if base <= 0 and height <= 0 :
+       if base <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -260,11 +260,11 @@ def trapezium () :
         side2 = float(input("Enter the second side of the trapezium (in cm) : "))
         side3 = float(input("Enter the third side of the trapezium (in cm) : "))
         side4 = float(input("Enter the fourth side of the trapezium (in cm) : "))
-        if side1 <= 0 and side2 <= 0 and side3 <=0 and side4 <= 0 :
+        if side1 <= 0 or side2 <= 0 or side3 <=0 or side4 <= 0 :
           print("Number should be positive.")
           continue
         perimeter = side2+side1+side3+side4
-        print(f"Perimeter of parallelogram is {perimeter}sq.cm")
+        print(f"Perimeter of parallelogram is {perimeter}cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -273,7 +273,7 @@ def trapezium () :
         side1 = float(input("Enter the first side of the trapezium (in cm) : "))
         side2 = float(input("Enter the second side of the trapezium (in cm) : "))
         height = float(input("Enter the height of the trapezium (in cm) : "))
-        if side1 <= 0 and side2 <= 0 and height <=0 :
+        if side1 <= 0 or side2 <= 0 or height <=0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -298,7 +298,7 @@ def rhombus () :
           print("Number should be positive.")
           continue
         perimeter = side*4
-        print(f"Perimeter of rhombus is {perimeter}sq.cm")
+        print(f"Perimeter of rhombus is {perimeter}cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -306,7 +306,7 @@ def rhombus () :
       try :
         diagonal1 = float(input("Enter the first diagonal of the rhombus : "))
         diagonal2 = float(input("Enter the second diagonal of the rhombus : "))
-        if diagonal1 <= 0 and diagonal2 <= 0 :
+        if diagonal1 <= 0 or diagonal2 <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -328,11 +328,11 @@ def kite () :
       try :
         side1 = float(input("Enter the first side of the kite : "))
         side2 = float(input("Enter the second side of the kite : "))
-        if side1 <= 0 and side2 <=0 :
+        if side1 <= 0 or side2 <=0 :
           print("Number should be positive.")
           continue
         perimeter = 2*(side1+side2)
-        print(f"Perimeter of kite is {perimeter}sq.cm")
+        print(f"Perimeter of kite is {perimeter}cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -340,7 +340,7 @@ def kite () :
       try :
         diagonal1 = float(input("Enter the first diagonal of the kite : "))
         diagonal2 = float(input("Enter the second diagonal of the kite : "))
-        if diagonal1 <= 0 and diagonal2 <= 0 :
+        if diagonal1 <= 0 or diagonal2 <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -395,7 +395,7 @@ def cuboid () :
         length = float(input("Enter the length of cuboid : "))
         width = float(input("Enter the width of cuboid : "))
         height = float(input("Enter the height of cuboid : "))
-        if length <= 0 and width <=0 and height <=0 :
+        if length <= 0 or width <=0 or height <=0 :
           print("Number should be positive.")
           continue
         surface_area = 2*(length*width+length*height+width*height)
@@ -408,7 +408,7 @@ def cuboid () :
        length = float(input("Enter the length of cuboid : "))
        width = float(input("Enter the width of cuboid : "))
        height = float(input("Enter the height of cuboid : "))
-       if length <= 0 and width <=0 and height <=0 :
+       if length <= 0 or width <=0 or height <=0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -462,7 +462,7 @@ def cylinder () :
       try :
         radius = float(input("Enter the radius of cylinder : "))
         height = float(input("Enter the height of cylinder : "))
-        if radius <= 0 and height <=0 :
+        if radius <= 0 or height <=0 :
           print("Number should be positive.")
           continue
         sarea = 2*math.pi*radius*(height+radius)
@@ -474,7 +474,7 @@ def cylinder () :
       try :
        radius = float(input("Enter the radius of the cylinder : "))
        height = float(input("Enter the height of cylinder : "))
-       if radius <= 0 and height <= 0 :
+       if radius <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -496,7 +496,7 @@ def cone () :
       try :
         radius = float(input("Enter the radius of the cone : "))
         height = float(input("Enter the height of the cone : "))
-        if radius <= 0 and height <=0 :
+        if radius <= 0 or height <=0 :
           print("Number should be positive.")
           continue
         slant_height = math.sqrt((radius**2+height**2))
@@ -508,7 +508,7 @@ def cone () :
       try :
        radius = float(input("Enter the radius of the cone : "))
        height = float(input("Enter the height of the cone : "))
-       if radius <= 0 and height <= 0 :
+       if radius <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -521,7 +521,7 @@ def cone () :
       try :
        radius = float(input("Enter the radius of the cone : "))
        height = float(input("Enter the height of the cone : "))
-       if radius <= 0 and height <= 0 :
+       if radius <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -587,7 +587,7 @@ def square_pyramid () :
       try :
         baselen = float(input("Enter the base length of square pyramid : "))
         height = float(input("Enter vertical height : "))
-        if baselen <= 0 and height <=0 :
+        if baselen <= 0 or height <=0 :
           print("Number should be positive.")
           continue
         slant = math.sqrt(height**2 + (baselen/2)**2)
@@ -599,7 +599,7 @@ def square_pyramid () :
       try :
        baselen = float(input("Enter the base length of square pyramid : "))
        height = float(input("Enter vertical height of square pyramid : "))
-       if baselen <= 0 and height <= 0 :
+       if baselen <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -607,12 +607,12 @@ def square_pyramid () :
         continue
       slant = math.sqrt(height**2 + (baselen/2)**2)
       lateral_surface_area = 2*baselen*slant
-      print(f"Lateral surface area of cone is {lateral_surface_area}sq.cm")
+      print(f"Lateral surface area of square pyramid is {lateral_surface_area}sq.cm")
     elif choose == '4':
       try :
        baselen = float(input("Enter the base length of square pyramid : "))
        height = float(input("Enter vertical height : "))
-       if baselen <= 0 and height <= 0 :
+       if baselen <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -620,13 +620,14 @@ def square_pyramid () :
         continue
       base_area = baselen**2
       slant = math.sqrt(height**2 + (baselen/2)**2)
-      total_surface_area = base_area+2*base_area*slant
-      print(f"Total surface area of cone is {total_surface_area}sq.cm")
+      lateral_surface_area = 2*baselen*slant
+      total_surface_area = base_area+lateral_surface_area
+      print(f"Total surface area of square pyramid is {total_surface_area}sq.cm")
     elif choose == '5':
       try :
        baselen = float(input("Enter the base length of square pyramid : "))
        height = float(input("Enter vertical height : "))
-       if baselen <= 0 and height <= 0 :
+       if baselen <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -649,7 +650,7 @@ def rectangular_pyramid () :
      try :
         baselen = float(input("Enter the base length of rectangular pyramid : "))
         basewid = float(input("Enter the base width of rectangular pyramid : "))
-        if baselen <= 0 and basewid <=0 :
+        if baselen <= 0 or basewid <=0 :
           print("Number should be positive.")
           continue
         base_area = baselen*basewid
@@ -661,7 +662,7 @@ def rectangular_pyramid () :
       try :
         basewid = float(input("Enter the base width of rectangular pyramid : "))
         height = float(input("Enter vertical height : "))
-        if basewid <= 0 and height <=0 :
+        if basewid <= 0 or height <=0 :
           print("Number should be positive.")
           continue
         slantlen =  math.sqrt((basewid/2)**2+height**2)
@@ -673,20 +674,20 @@ def rectangular_pyramid () :
       try :
        baselen = float(input("Enter the base length of rectangular pyramid : "))
        height = float(input("Enter vertical height of rectangular pyramid : "))
-       if baselen <= 0 and height <= 0 :
+       if baselen <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
         print("Please enter a number.")
         continue
       slantwid = math.sqrt((baselen/2)**2+height**2)
-      print(f"Slant width of rectangular pyramid is {slantwid}sq.cm")
+      print(f"Slant width of rectangular pyramid is {slantwid}cm")
     elif choose == '4':
       try :
        baselen = float(input("Enter the base length of rectangular pyramid : "))
        basewid = float(input("Enter the base width of rectangular pyramid : "))
        height = float(input("Enter vertical height : "))
-       if baselen <= 0 and height <= 0 and basewid <= 0 :
+       if baselen <= 0 or height <= 0 or basewid <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -697,13 +698,13 @@ def rectangular_pyramid () :
       base_area = baselen*basewid
       surface_area = base_area+baselen*slantwid+basewid*slantlen
 
-      print(f"Total surface area of cone is {surface_area}sq.cm")
+      print(f"Total surface area of rectangular pyramid is {surface_area}sq.cm")
     elif choose == '5':
       try :
        basewid = float(input("Enter the base width of rectangular pyramid : "))
        baselen = float(input("Enter the base length of rectangular pyramid : "))
        height = float(input("Enter vertical height : "))
-       if baselen <= 0 and height <= 0 :
+       if baselen <= 0 or height <= 0 :
           print("Number should be positive.")
           continue
       except ValueError :
@@ -721,7 +722,7 @@ def triangular_pyramid () :
  while True:
     print("\nWhat do you want to calculate?")
     print("1. Base area of triangular pyramid")
-    print("2. Volume using base and height")
+    print("2. Volume using base or height")
     print("3. Volume using Heron's formula")
     print("4. Lateral surface area")
     print("5. Total surface area")
@@ -738,8 +739,8 @@ def triangular_pyramid () :
       base_area = 0.5 * base * height_base
       print(f"Base area of triangular pyramid is {base_area} sq.cm")
      except ValueError:
-         print("Please enter valid numbers.")
-     continue
+      print("Please enter valid numbers.")
+      continue
 
     elif choice == '2':
      try :
@@ -751,10 +752,10 @@ def triangular_pyramid () :
         continue
        base_area = 0.5 * base * height_base
        volume = (1/3) * base_area * pyramid_height
-       print(f"Volume of triangular pyramid is {volume} cubic cm")
+       print(f"Volume of triangular pyramid is {volume}cube.cm")
      except ValueError:
       print("Please enter valid numbers.")
-     continue
+      continue
      
 
     elif choice == '3':
@@ -769,8 +770,8 @@ def triangular_pyramid () :
       s = (side1 + side2 + side3) / 2
       base_area = math.sqrt(s * (s - side1) * (s - side2) * (s - side3))
       volume = (1/3) * base_area * pyramid_height
-      print(f"Base area using Heron's formula: {base_area} sq.cm")
-      print(f"Volume of triangular pyramid is {volume} cubic cm")
+      print(f"Base area using Heron's formula: {base_area}sq.cm")
+      print(f"Volume of triangular pyramid is {volume}cube.cm")
      except ValueError:
       print("Please enter valid numbers.")
       continue
@@ -783,13 +784,13 @@ def triangular_pyramid () :
          slant_height = float(input("Enter the slant height of the pyramid: "))
          if side1 <= 0 or side2 <= 0 or side3 <= 0 or slant_height <= 0:
           print("Numbers should be positive.")
-         continue
+          continue
          perimeter = side1 + side2 + side3
          lateral_area = 0.5 * perimeter * slant_height
          print(f"Lateral surface area is {lateral_area} sq.cm")
         except ValueError:
          print("Please enter valid numbers.")
-        continue
+         continue
 
     elif choice == '5':
      try:
