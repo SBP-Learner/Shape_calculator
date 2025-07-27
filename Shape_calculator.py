@@ -27,7 +27,7 @@ def square () : # creates a function
        print("Invalid input! Please enter a number.")
        continue
      area = side*side
-     print(f"Area of square is {area}sq.cm")
+     print(f"Area of square is {area:.2f}sq.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break # breakes the current loop or takes back to previous loop
@@ -61,7 +61,7 @@ def rectangle () :
        print("Please enter a number.")
        continue
      area = length*width
-     print(f"Area of rectangle is {area}sq.cm")
+     print(f"Area of rectangle is {area:.2f}sq.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break 
@@ -96,7 +96,7 @@ def triangle () :
        print("Please enter a number.")
        continue
       area = 0.5*base*height
-      print(f"Area of triangle is {area}sq.cm")
+      print(f"Area of triangle is {area:.2f}sq.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -130,7 +130,7 @@ def right_triangle () :
        print("Please enter a number.")
        continue
       area = 0.5*base*height
-      print(f"Area of triangle is {area}sq.cm")
+      print(f"Area of triangle is {area:.2f}sq.cm")
 
      elif choose == '3' :
       try :
@@ -194,7 +194,7 @@ def circle () :
           print("Number should be positive.")
           continue
         circumference = 2*math.pi*radius
-        print(f"Circumference of circle is {circumference}cm")
+        print(f"Circumference of circle is {circumference:.2f}cm")
        except ValueError :
          print("Please enter a number.")
          continue
@@ -208,7 +208,7 @@ def circle () :
         print("Please enter a number.")
         continue
        area = math.pi*radius*radius
-       print(f"Area of circle is {area}sq.cm")
+       print(f"Area of circle is {area:.2f}sq.cm")
 
       elif choose == '3' :
        print("Exiting the current page....")
@@ -243,7 +243,7 @@ def parallelogram () :
        print("Please enter a number.")
        continue
       area = base*height
-      print(f"Area of parallelogram is {area}sq.cm")
+      print(f"Area of parallelogram is {area:.2f}sq.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -280,7 +280,7 @@ def trapezium () :
        print("Please enter a number.")
        continue
       area = 0.5*(side1+side2)*height
-      print(f"Area of parallelogram is {area}sq.cm")
+      print(f"Area of parallelogram is {area:.2f}sq.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -313,7 +313,7 @@ def rhombus () :
        print("Please enter a number.")
        continue
       area = 0.5*diagonal1*diagonal2
-      print(f"Area of rhombus is {area}sq.cm")
+      print(f"Area of rhombus is {area:.2f}sq.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -347,7 +347,7 @@ def kite () :
         print("Please enter a number.")
         continue
       area = 0.5*diagonal1*diagonal2
-      print(f"Area of kite is {area}sq.cm")
+      print(f"Area of kite is {area:.2f}sq.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -365,7 +365,7 @@ def cube () :
           print("Number should be positive.")
           continue
         sarea = 6*side**2
-        print(f"Surface area of cube is {sarea}sq.cm")
+        print(f"Surface area of cube is {sarea:.2f}sq.cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -379,7 +379,7 @@ def cube () :
         print("Please enter a number.")
         continue
       volume = side**3
-      print(f"Volume of cube is {volume}cube.cm")
+      print(f"Volume of cube is {volume:.2f}cube.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -399,7 +399,7 @@ def cuboid () :
           print("Number should be positive.")
           continue
         surface_area = 2*(length*width+length*height+width*height)
-        print(f"Surface area of cuboid is {surface_area}sq.cm")
+        print(f"Surface area of cuboid is {surface_area:.2f}sq.cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -415,7 +415,7 @@ def cuboid () :
         print("Please enter a number.")
         continue
       volume = length*width*height
-      print(f"Volume of cuboid is {volume}cube.cm")
+      print(f"Volume of cuboid is {volume:.2f}cube.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -433,7 +433,7 @@ def sphere () :
           print("Number should be positive.")
           continue
         sarea = 4*math.pi*radius**2
-        print(f"Surface area of sphere is {sarea}sq.cm")
+        print(f"Surface area of sphere is {sarea:.2f}sq.cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -447,7 +447,7 @@ def sphere () :
         print("Please enter a number.")
         continue
       volume = 4.0/3*math.pi*radius**3
-      print(f"Volume of sphere is {volume}cube.cm")
+      print(f"Volume of sphere is {volume:.2f}cube.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -466,7 +466,7 @@ def cylinder () :
           print("Number should be positive.")
           continue
         sarea = 2*math.pi*radius*(height+radius)
-        print(f"Surface area of cylinder is {sarea}sq.cm")
+        print(f"Surface area of cylinder is {sarea:.2f}sq.cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -481,7 +481,7 @@ def cylinder () :
         print("Please enter a number.")
         continue
       volume = math.pi*radius**2*height
-      print(f"Volume of cylinder is {volume}cube.cm")
+      print(f"Volume of cylinder is {volume:.2f}cube.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -516,7 +516,7 @@ def cone () :
         continue
       slant_height = math.sqrt((radius**2+height**2))
       sarea = math.pi*radius*(slant_height+radius)
-      print(f"Surface area of cone is {sarea}sq.cm")
+      print(f"Surface area of cone is {sarea:.2f}sq.cm")
     elif choose == '3' :
       try :
        radius = float(input("Enter the radius of the cone : "))
@@ -528,7 +528,7 @@ def cone () :
         print("Please enter a number.")
         continue
       volume = 1/3*math.pi*radius**2*height
-      print(f"Volume of cone is {volume}cube.cm")
+      print(f"Volume of cone is {volume:.2f}cube.cm")
     elif choose == '4' :
        print("Exiting the current page....")
        break
@@ -547,7 +547,7 @@ def hemisphere () :
           print("Number should be positive.")
           continue
         sarea = 3*math.pi*radius**2
-        print(f"Surface area of hemisphere is {sarea}sq.cm")
+        print(f"Surface area of hemisphere is {sarea:.2f}sq.cm")
       except ValueError :
          print("Please enter a number.")
          continue
@@ -561,7 +561,7 @@ def hemisphere () :
         print("Please enter a number.")
         continue
       volume = 2/3*math.pi*radius**3
-      print(f"Volume of hemisphere is {volume}cube.cm")
+      print(f"Volume of hemisphere is {volume:.2f}cube.cm")
     elif choose == '3' :
        print("Exiting the current page....")
        break
@@ -579,7 +579,7 @@ def square_pyramid () :
           print("Number should be positive.")
           continue
         base_area = baselen**2
-        print(f"Base area of square pyramid is {base_area}sq.cm")
+        print(f"Base area of square pyramid is {base_area:.2f}sq.cm")
      except ValueError :
          print("Please enter a number.")
          continue
@@ -607,7 +607,7 @@ def square_pyramid () :
         continue
       slant = math.sqrt(height**2 + (baselen/2)**2)
       lateral_surface_area = 2*baselen*slant
-      print(f"Lateral surface area of square pyramid is {lateral_surface_area}sq.cm")
+      print(f"Lateral surface area of square pyramid is {lateral_surface_area:.2f}sq.cm")
     elif choose == '4':
       try :
        baselen = float(input("Enter the base length of square pyramid : "))
@@ -635,7 +635,7 @@ def square_pyramid () :
         continue
       base_area = baselen**2
       volume = 1/3*base_area*height
-      print(f"Volume of square pyramid is {volume}cube.cm")
+      print(f"Volume of square pyramid is {volume:.2f}cube.cm")
     elif choose == '6' :
        print("Exiting the current page....")
        break
@@ -654,7 +654,7 @@ def rectangular_pyramid () :
           print("Number should be positive.")
           continue
         base_area = baselen*basewid
-        print(f"Base area of rectangular pyramid is {base_area}sq.cm")
+        print(f"Base area of rectangular pyramid is {base_area:.2f}sq.cm")
      except ValueError :
          print("Please enter a number.")
          continue
@@ -698,7 +698,7 @@ def rectangular_pyramid () :
       base_area = baselen*basewid
       surface_area = base_area+baselen*slantwid+basewid*slantlen
 
-      print(f"Total surface area of rectangular pyramid is {surface_area}sq.cm")
+      print(f"Total surface area of rectangular pyramid is {surface_area:.2f}sq.cm")
     elif choose == '5':
       try :
        basewid = float(input("Enter the base width of rectangular pyramid : "))
@@ -711,7 +711,7 @@ def rectangular_pyramid () :
         print("Please enter a number.")
         continue
       volume = 1/3*baselen*basewid*height
-      print(f"Volume of rectangular pyramid is {volume}cube.cm")
+      print(f"Volume of rectangular pyramid is {volume:.2f}cube.cm")
     elif choose == '6' :
        print("Exiting the current page....")
        break
@@ -737,7 +737,7 @@ def triangular_pyramid () :
        print("Numbers should be positive.")
        continue
       base_area = 0.5 * base * height_base
-      print(f"Base area of triangular pyramid is {base_area} sq.cm")
+      print(f"Base area of triangular pyramid is {base_area:.2f} sq.cm")
      except ValueError:
       print("Please enter valid numbers.")
       continue
@@ -752,7 +752,7 @@ def triangular_pyramid () :
         continue
        base_area = 0.5 * base * height_base
        volume = (1/3) * base_area * pyramid_height
-       print(f"Volume of triangular pyramid is {volume}cube.cm")
+       print(f"Volume of triangular pyramid is {volume:.2f}cube.cm")
      except ValueError:
       print("Please enter valid numbers.")
       continue
@@ -770,8 +770,8 @@ def triangular_pyramid () :
       s = (side1 + side2 + side3) / 2
       base_area = math.sqrt(s * (s - side1) * (s - side2) * (s - side3))
       volume = (1/3) * base_area * pyramid_height
-      print(f"Base area using Heron's formula: {base_area}sq.cm")
-      print(f"Volume of triangular pyramid is {volume}cube.cm")
+      print(f"Base area using Heron's formula: {base_area:.2f}sq.cm")
+      print(f"Volume of triangular pyramid is {volume:.2f}cube.cm")
      except ValueError:
       print("Please enter valid numbers.")
       continue
