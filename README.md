@@ -36,5 +36,3 @@ Users input the required dimensions, and the program calculates:
 - **2D**: Area and perimeter  
 - **3D**: Volume and surface area  
 
-It also shows the formula and substituted values for clarity.
-
